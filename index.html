@@ -10,11 +10,11 @@
       function picLibrary() {
         document.images[0].src = arr[i];
         i++;
-        if (i < 3) i = 0;
+        if (i > 3) i = 0; // Corrected condition
       }
 
       function start() {
-        ref = setInterval("picLibrary()", 1000);
+        ref = setInterval(picLibrary, 1000); // Passed function reference
       }
 
       function stop() {
